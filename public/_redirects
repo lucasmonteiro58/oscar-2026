@@ -1,0 +1,2 @@
+# SPA: todas as rotas servem index.html (status 200 = rewrite)
+/*    /index.html   200
