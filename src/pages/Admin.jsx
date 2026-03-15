@@ -91,12 +91,6 @@ export default function Admin() {
   };
 
   const handleSave = async () => {
-    const total = categories.length;
-    const filled = Object.keys(winners).length;
-    if (filled < total) {
-      setError(`Preencha todas as categorias (${filled}/${total})`);
-      return;
-    }
     setSaving(true);
     setError('');
     try {
@@ -240,7 +234,7 @@ export default function Admin() {
         <button
           type="button"
           onClick={handleSave}
-          disabled={!allFilled || saving}
+          disabled={saving}
           className="flex-1 py-4 rounded-xl border border-gray-600 text-gray-200 font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-800 transition-colors"
         >
           {saving ? 'Salvando...' : 'Salvar'}
