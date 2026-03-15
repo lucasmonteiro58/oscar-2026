@@ -38,6 +38,7 @@ export default function Home() {
   const [categories, setCategories] = useState([]);
   const [participants, setParticipants] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [expandedUid, setExpandedUid] = useState(null);
 
   useEffect(() => {
     if (!user) return;
@@ -60,6 +61,7 @@ export default function Home() {
             uid: v.uid,
             displayName: usersMap[v.uid]?.displayName ?? 'Anônimo',
             photoURL: usersMap[v.uid]?.photoURL ?? '',
+            answers: v.answers || {},
           }));
         setParticipants(whoVoted);
       }
@@ -84,18 +86,19 @@ export default function Home() {
     return null;
   }
 
-  // Já votou: mostrar lista de respostas + aguardando resultado ou botão conferir
-  const categoryMap = Object.fromEntries(categories.map((c) => [c.id, c]));
-  const answersList = Object.entries(vote.answers).map(([catId, nomineeId]) => {
-    const cat = categoryMap[catId];
-    const nominee = cat?.nominees?.find((n) => n.id === nomineeId);
-    const photo = nominee?.photo && typeof nominee.photo === 'string' ? nominee.photo.trim() : '';
-    return {
-      category: cat?.category ?? catId,
-      name: nominee?.name ?? nomineeId,
-      photo: photo || null,
-    };
-  });
+  // Já votou: mostrar lista de respostas na mesma ordem do JSON + aguardando resultado ou botão conferir
+  const getVotesList = (answers, cats = categories) =>
+    cats.map((cat) => {
+      const nomineeId = (answers || {})[cat.id];
+      const nominee = cat.nominees?.find((n) => n.id === nomineeId);
+      const photo = nominee?.photo && typeof nominee.photo === 'string' ? nominee.photo.trim() : '';
+      return {
+        category: cat.category,
+        name: nominee?.name ?? nomineeId ?? '—',
+        photo: photo || null,
+      };
+    });
+  const answersList = getVotesList(vote.answers);
   const published = results?.published === true;
 
   const handleLogout = async () => {
@@ -155,29 +158,77 @@ export default function Home() {
           Participantes do bolão
         </h2>
         <ul className="space-y-2">
-          {participants.map((p) => (
-            <li
-              key={p.uid}
-              className="flex items-center gap-3 py-2 px-3 rounded-lg bg-oscar-card border border-gray-800"
-            >
-              <div className="w-10 h-10 rounded-full bg-gray-700 overflow-hidden flex-shrink-0">
-                {p.photoURL ? (
-                  <img
-                    src={p.photoURL}
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <span className="w-full h-full flex items-center justify-center text-oscar-gold font-semibold">
-                    {p.displayName?.charAt(0)?.toUpperCase() ?? '?'}
+          {participants.map((p) => {
+            const isExpanded = expandedUid === p.uid;
+            const votesList = getVotesList(p.answers);
+            return (
+              <li
+                key={p.uid}
+                className={`rounded-lg border overflow-hidden transition-colors ${
+                  isExpanded ? 'border-oscar-gold/50 bg-oscar-card' : 'border-gray-800 bg-oscar-card'
+                }`}
+              >
+                <button
+                  type="button"
+                  onClick={() => setExpandedUid(isExpanded ? null : p.uid)}
+                  className="w-full flex items-center gap-3 py-2 px-3 text-left hover:bg-gray-800/50 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full bg-gray-700 overflow-hidden flex-shrink-0">
+                    {p.photoURL ? (
+                      <img
+                        src={p.photoURL}
+                        alt=""
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <span className="w-full h-full flex items-center justify-center text-oscar-gold font-semibold">
+                        {p.displayName?.charAt(0)?.toUpperCase() ?? '?'}
+                      </span>
+                    )}
+                  </div>
+                  <span className="font-medium text-gray-200 truncate flex-1">
+                    {p.uid === user.uid ? `${p.displayName} (você)` : p.displayName}
                   </span>
+                  <span
+                    className={`text-gray-500 text-sm transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                    aria-hidden
+                  >
+                    ▼
+                  </span>
+                </button>
+                {isExpanded && (
+                  <div className="px-3 pb-3 pt-0 border-t border-gray-800">
+                    <ul className="space-y-1.5 mt-2">
+                      {votesList.map(({ category, name, photo }) => (
+                        <li
+                          key={category}
+                          className="flex items-center gap-2 py-1.5 px-2 rounded-md bg-gray-800/50"
+                        >
+                          <span className="text-gray-500 text-xs w-24 flex-shrink-0 truncate">
+                            {category}
+                          </span>
+                          {photo ? (
+                            <img
+                              src={photo}
+                              alt=""
+                              className="w-6 h-6 rounded object-cover flex-shrink-0"
+                            />
+                          ) : (
+                            <span className="w-6 h-6 rounded bg-gray-700 flex-shrink-0 flex items-center justify-center text-[10px] font-semibold text-gray-500">
+                              ?
+                            </span>
+                          )}
+                          <span className="font-medium text-sm text-gray-200 truncate min-w-0">
+                            {name}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
-              </div>
-              <span className="font-medium text-gray-200 truncate">
-                {p.uid === user.uid ? `${p.displayName} (você)` : p.displayName}
-              </span>
-            </li>
-          ))}
+              </li>
+            );
+          })}
         </ul>
       </section>
     </div>
