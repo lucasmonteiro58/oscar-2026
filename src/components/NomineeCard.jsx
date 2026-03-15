@@ -18,7 +18,7 @@ export default function NomineeCard({ nominee, selected, onSelect }) {
           : 'border-gray-700 bg-oscar-card hover:border-gray-600'
       }`}
     >
-      <div className="aspect-[4/3] bg-gray-800 flex items-center justify-center overflow-hidden">
+      <div className="aspect-[16/9] bg-gray-800 flex items-center justify-center overflow-hidden">
         {hasPhoto ? (
           <img
             src={photo}
