@@ -1,0 +1,194 @@
+[
+  {
+    "id": "cat-melhor-filme",
+    "category": "Melhor Filme",
+    "nominees": [
+      { "id": "mf-01", "name": "Bugonia", "photo": "https://t.ctcdn.com.br/YaA9HkWZgO3YFZrzyZJGTyaSlXE=/640x360/smart/i1057093.png" },
+      { "id": "mf-02", "name": "F1", "photo": "" },
+      { "id": "mf-03", "name": "Frankenstein", "photo": "" },
+      { "id": "mf-04", "name": "Hamnet", "photo": "" },
+      { "id": "mf-05", "name": "Marty Supreme", "photo": "" },
+      { "id": "mf-06", "name": "O Agente Secreto", "photo": "" },
+      { "id": "mf-07", "name": "Pecadores", "photo": "" },
+      { "id": "mf-08", "name": "Sonhos de Trem", "photo": "" },
+      { "id": "mf-09", "name": "Uma Batalha Após a Outra", "photo": "" },
+      { "id": "mf-10", "name": "Valor Sentimental", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-ator",
+    "category": "Melhor Ator",
+    "nominees": [
+      { "id": "ma-01", "name": "Ethan Hawke (Blue Moon)", "photo": "" },
+      { "id": "ma-02", "name": "Leonardo DiCaprio (Uma Batalha Após a Outra)", "photo": "" },
+      { "id": "ma-03", "name": "Michael B. Jordan (Pecadores)", "photo": "" },
+      { "id": "ma-04", "name": "Timothée Chalamet (Marty Supreme)", "photo": "" },
+      { "id": "ma-05", "name": "Wagner Moura (O Agente Secreto)", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-atriz",
+    "category": "Melhor Atriz",
+    "nominees": [
+      { "id": "maz-01", "name": "Emma Stone (Bugonia)", "photo": "" },
+      { "id": "maz-02", "name": "Jessie Buckley (Hamnet)", "photo": "" },
+      { "id": "maz-03", "name": "Kate Hudson (Song Sung Blue)", "photo": "" },
+      { "id": "maz-04", "name": "Renate Reinsve (Valor Sentimental)", "photo": "" },
+      { "id": "maz-05", "name": "Rose Byrne (Se Eu Tivesse Pernas, Eu Te Chutaria)", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-ator-coadjuvante",
+    "category": "Melhor Ator Coadjuvante",
+    "nominees": [
+      { "id": "mac-01", "name": "Benicio del Toro (Uma Batalha Após a Outra)", "photo": "" },
+      { "id": "mac-02", "name": "Delroy Lindo (Pecadores)", "photo": "" },
+      { "id": "mac-03", "name": "Jacob Elordi (Frankenstein)", "photo": "" },
+      { "id": "mac-04", "name": "Sean Penn (Uma Batalha Após a Outra)", "photo": "" },
+      { "id": "mac-05", "name": "Stellan Skarsgård (Valor Sentimental)", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-atriz-coadjuvante",
+    "category": "Melhor Atriz Coadjuvante",
+    "nominees": [
+      { "id": "mazc-01", "name": "Amy Madigan (A Hora do Mal)", "photo": "" },
+      { "id": "mazc-02", "name": "Elle Fanning (Valor Sentimental)", "photo": "" },
+      { "id": "mazc-03", "name": "Inga Ibsdotter Lilleaas (Valor Sentimental)", "photo": "" },
+      { "id": "mazc-04", "name": "Teyana Taylor (Uma Batalha Após a Outra)", "photo": "" },
+      { "id": "mazc-05", "name": "Wunmi Mosaku (Pecadores)", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-direcao",
+    "category": "Melhor Direção",
+    "nominees": [
+      { "id": "md-01", "name": "Chloé Zhao (Hamnet)", "photo": "" },
+      { "id": "md-02", "name": "Joachim Trier (Valor Sentimental)", "photo": "" },
+      { "id": "md-03", "name": "Josh Safdie (Marty Supreme)", "photo": "" },
+      { "id": "md-04", "name": "Paul Thomas Anderson (Uma Batalha Após a Outra)", "photo": "" },
+      { "id": "md-05", "name": "Ryan Coogler (Pecadores)", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-roteiro-original",
+    "category": "Melhor Roteiro Original",
+    "nominees": [
+      { "id": "mro-01", "name": "Blue Moon", "photo": "" },
+      { "id": "mro-02", "name": "Foi Apenas Um Acidente", "photo": "" },
+      { "id": "mro-03", "name": "Marty Supreme", "photo": "" },
+      { "id": "mro-04", "name": "Pecadores", "photo": "" },
+      { "id": "mro-05", "name": "Valor Sentimental", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-roteiro-adaptado",
+    "category": "Melhor Roteiro Adaptado",
+    "nominees": [
+      { "id": "mra-01", "name": "Bugonia", "photo": "" },
+      { "id": "mra-02", "name": "Frankenstein", "photo": "" },
+      { "id": "mra-03", "name": "Hamnet", "photo": "" },
+      { "id": "mra-04", "name": "Sonhos de Trem", "photo": "" },
+      { "id": "mra-05", "name": "Uma Batalha Após a Outra", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-filme-internacional",
+    "category": "Melhor Filme Internacional",
+    "nominees": [
+      { "id": "mfi-01", "name": "A Voz de Hind Rajab (Tunísia)", "photo": "" },
+      { "id": "mfi-02", "name": "Foi Apenas Um Acidente (França)", "photo": "" },
+      { "id": "mfi-03", "name": "O Agente Secreto (Brasil)", "photo": "" },
+      { "id": "mfi-04", "name": "Sirât (Espanha)", "photo": "" },
+      { "id": "mfi-05", "name": "Valor Sentimental (Noruega)", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-animacao",
+    "category": "Melhor Animação",
+    "nominees": [
+      { "id": "man-01", "name": "A Pequena Amélie", "photo": "" },
+      { "id": "man-02", "name": "Arco", "photo": "" },
+      { "id": "man-03", "name": "Elio", "photo": "" },
+      { "id": "man-04", "name": "Guerreiras do K-Pop", "photo": "" },
+      { "id": "man-05", "name": "Zootopia 2", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-elenco",
+    "category": "Melhor Elenco",
+    "nominees": [
+      { "id": "mel-01", "name": "Hamnet", "photo": "" },
+      { "id": "mel-02", "name": "Marty Supreme", "photo": "" },
+      { "id": "mel-03", "name": "O Agente Secreto", "photo": "" },
+      { "id": "mel-04", "name": "Pecadores", "photo": "" },
+      { "id": "mel-05", "name": "Uma Batalha Após a Outra", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-fotografia",
+    "category": "Melhor Fotografia",
+    "nominees": [
+      { "id": "mfo-01", "name": "Frankenstein", "photo": "" },
+      { "id": "mfo-02", "name": "Marty Supreme", "photo": "" },
+      { "id": "mfo-03", "name": "Pecadores", "photo": "" },
+      { "id": "mfo-04", "name": "Sonhos de Trem", "photo": "" },
+      { "id": "mfo-05", "name": "Uma Batalha Após a Outra", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-trilha-sonora",
+    "category": "Melhor Trilha Sonora",
+    "nominees": [
+      { "id": "mts-01", "name": "Bugonia", "photo": "" },
+      { "id": "mts-02", "name": "Frankenstein", "photo": "" },
+      { "id": "mts-03", "name": "Hamnet", "photo": "" },
+      { "id": "mts-04", "name": "Pecadores", "photo": "" },
+      { "id": "mts-05", "name": "Uma Batalha Após a Outra", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-cancao-original",
+    "category": "Melhor Canção Original",
+    "nominees": [
+      { "id": "mco-01", "name": "Dear Me (Diane Warren: Relentless)", "photo": "" },
+      { "id": "mco-02", "name": "Golden (Guerreiras do K-Pop)", "photo": "" },
+      { "id": "mco-03", "name": "I Lied to You (Pecadores)", "photo": "" },
+      { "id": "mco-04", "name": "Sweet Dreams of Joy (Viva Verdi!)", "photo": "" },
+      { "id": "mco-05", "name": "Train Dreams (Sonhos de Trem)", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-figurino",
+    "category": "Melhor Figurino",
+    "nominees": [
+      { "id": "mfg-01", "name": "Avatar: Fogo e Cinzas", "photo": "" },
+      { "id": "mfg-02", "name": "Frankenstein", "photo": "" },
+      { "id": "mfg-03", "name": "Hamnet", "photo": "" },
+      { "id": "mfg-04", "name": "Marty Supreme", "photo": "" },
+      { "id": "mfg-05", "name": "Pecadores", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhores-efeitos-visuais",
+    "category": "Melhores Efeitos Visuais",
+    "nominees": [
+      { "id": "mev-01", "name": "Avatar: Fogo e Cinzas", "photo": "" },
+      { "id": "mev-02", "name": "F1", "photo": "" },
+      { "id": "mev-03", "name": "Jurassic World: Recomeço", "photo": "" },
+      { "id": "mev-04", "name": "O Ônibus Perdido", "photo": "" },
+      { "id": "mev-05", "name": "Pecadores", "photo": "" }
+    ]
+  },
+  {
+    "id": "cat-melhor-som",
+    "category": "Melhor Som",
+    "nominees": [
+      { "id": "mso-01", "name": "F1", "photo": "" },
+      { "id": "mso-02", "name": "Frankenstein", "photo": "" },
+      { "id": "mso-03", "name": "Pecadores", "photo": "" },
+      { "id": "mso-04", "name": "Sirât", "photo": "" },
+      { "id": "mso-05", "name": "Uma Batalha Após a Outra", "photo": "" }
+    ]
+  }
+]
