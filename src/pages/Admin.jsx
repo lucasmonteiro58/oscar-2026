@@ -227,6 +227,7 @@ export default function Admin() {
                   key={nominee.id}
                   nominee={nominee}
                   selected={winners[cat.id] === nominee.id}
+                  hasSelection={winners[cat.id] != null}
                   onSelect={() => handleSelectWinner(cat.id, nominee.id)}
                 />
               ))}
