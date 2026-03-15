@@ -41,154 +41,121 @@
     "id": "cat-melhor-ator-coadjuvante",
     "category": "Melhor Ator Coadjuvante",
     "nominees": [
-      { "id": "mac-01", "name": "Benicio del Toro (Uma Batalha Após a Outra)", "photo": "" },
-      { "id": "mac-02", "name": "Delroy Lindo (Pecadores)", "photo": "" },
-      { "id": "mac-03", "name": "Jacob Elordi (Frankenstein)", "photo": "" },
-      { "id": "mac-04", "name": "Sean Penn (Uma Batalha Após a Outra)", "photo": "" },
-      { "id": "mac-05", "name": "Stellan Skarsgård (Valor Sentimental)", "photo": "" }
+      { "id": "mac-01", "name": "Benicio del Toro (Uma Batalha Após a Outra)", "photo": "https://br.web.img3.acsta.net/r_1280_720/img/56/e9/56e918a60e7a68c63600405db83c5636.jpg" },
+      { "id": "mac-02", "name": "Delroy Lindo (Pecadores)", "photo": "https://preview.redd.it/i-think-delroy-lindo-might-get-a-nomination-for-best-v0-zj3fdrrdldxe1.jpeg?width=640&crop=smart&auto=webp&s=9af01a7221a9fab729973bacf934c2f9f2ac3a7e" },
+      { "id": "mac-03", "name": "Jacob Elordi (Frankenstein)", "photo": "https://ovicio.com.br/wp-content/uploads/2025/11/20251105-jacob-elordi-guillermo-del-toro-frankenstein.webp" },
+      { "id": "mac-04", "name": "Sean Penn (Uma Batalha Após a Outra)", "photo": "https://s2-valor.glbimg.com/eeZSVihdRkNuak4jr8VCEhR-JvQ=/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_63b422c2caee4269b8b34177e8876b93/internal_photos/bs/2025/y/J/42eP9jTHqRR0APqzDvSw/foto22cul-101-elaine-d14.jpg" },
+      { "id": "mac-05", "name": "Stellan Skarsgård (Valor Sentimental)", "photo": "https://rollingstone.com.br/wp-content/uploads/2026/01/Stellan-Skarsgard-de-Valor-Sentimental-consegue-feito-inedito-com-indicacao-ao-Oscar-2026.jpg" }
     ]
   },
   {
     "id": "cat-melhor-atriz-coadjuvante",
     "category": "Melhor Atriz Coadjuvante",
     "nominees": [
-      { "id": "mazc-01", "name": "Amy Madigan (A Hora do Mal)", "photo": "" },
-      { "id": "mazc-02", "name": "Elle Fanning (Valor Sentimental)", "photo": "" },
-      { "id": "mazc-03", "name": "Inga Ibsdotter Lilleaas (Valor Sentimental)", "photo": "" },
-      { "id": "mazc-04", "name": "Teyana Taylor (Uma Batalha Após a Outra)", "photo": "" },
-      { "id": "mazc-05", "name": "Wunmi Mosaku (Pecadores)", "photo": "" }
+      { "id": "mazc-01", "name": "Amy Madigan (A Hora do Mal)", "photo": "https://cdn.ome.lt/O-1rBne5_sn98eZ5qXbKVRkzWvY=/1200x630/smart/filters:format(webp)/extras/conteudos/unnamed-49-940x480.webp" },
+      { "id": "mazc-02", "name": "Elle Fanning (Valor Sentimental)", "photo": "https://blog.hiperion.art.br/wp-content/uploads/2025/12/elle-fanning-filmes-1024x538.jpg" },
+      { "id": "mazc-03", "name": "Inga Ibsdotter Lilleaas (Valor Sentimental)", "photo": "https://m.media-amazon.com/images/M/MV5BY2E5ZWY0MjAtNWQ2Ny00YTE2LTllMjUtNDE2ODEyZDBmYzBhXkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg" },
+      { "id": "mazc-04", "name": "Teyana Taylor (Uma Batalha Após a Outra)", "photo": "https://cinepop.com.br/wp-content/uploads/2026/01/teyana-taylor.jpg" },
+      { "id": "mazc-05", "name": "Wunmi Mosaku (Pecadores)", "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQomBpgb1HiCIJ2ymaO2_AG4ndjVOJToRQFfA&s" }
     ]
   },
   {
     "id": "cat-melhor-direcao",
     "category": "Melhor Direção",
     "nominees": [
-      { "id": "md-01", "name": "Chloé Zhao (Hamnet)", "photo": "" },
-      { "id": "md-02", "name": "Joachim Trier (Valor Sentimental)", "photo": "" },
-      { "id": "md-03", "name": "Josh Safdie (Marty Supreme)", "photo": "" },
-      { "id": "md-04", "name": "Paul Thomas Anderson (Uma Batalha Após a Outra)", "photo": "" },
-      { "id": "md-05", "name": "Ryan Coogler (Pecadores)", "photo": "" }
+      { "id": "md-01", "name": "Chloé Zhao (Hamnet)", "photo": "https://cdn.theplaylist.net/wp-content/uploads/2025/11/25225339/ChloeZhaoHamnetLAPremiere.jpg" },
+      { "id": "md-02", "name": "Joachim Trier (Valor Sentimental)", "photo": "https://ingresso-a.akamaihd.net/b2b/production/uploads/article/image/4727/7a6821eaee1e796b3f1098124916229d.jpg" },
+      { "id": "md-03", "name": "Josh Safdie (Marty Supreme)", "photo": "https://i.cbc.ca/ais/772cf868-bb57-4ed1-a134-b1833152b059,1766504125454/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C88%2C6142%2C3454%29%3B" },
+      { "id": "md-04", "name": "Paul Thomas Anderson (Uma Batalha Após a Outra)", "photo": "https://i.metroimg.com/T7BjQnjapEaH236dvBcFCIEsjsuKGN-Z_DWbeLZSA_w/w:1200/q:85/f:webp/plain/https://images.metroimg.com/2025/09/24145915/Leonardo-DiCaprio-e-Paul-Thomas-Anderson.jpg" },
+      { "id": "md-05", "name": "Ryan Coogler (Pecadores)", "photo": "https://ingresso-a.akamaihd.net/b2b/production/uploads/article/image/3292/e524158e9fd1f2b5c71a302f253a5aa2.jpg" }
     ]
   },
   {
     "id": "cat-melhor-roteiro-original",
     "category": "Melhor Roteiro Original",
     "nominees": [
-      { "id": "mro-01", "name": "Blue Moon", "photo": "" },
-      { "id": "mro-02", "name": "Foi Apenas Um Acidente", "photo": "" },
-      { "id": "mro-03", "name": "Marty Supreme", "photo": "" },
-      { "id": "mro-04", "name": "Pecadores", "photo": "" },
-      { "id": "mro-05", "name": "Valor Sentimental", "photo": "" }
+      { "id": "mro-01", "name": "Blue Moon", "photo": "https://i.ytimg.com/vi/qo7gRHip0lI/maxresdefault.jpg" },
+      { "id": "mro-02", "name": "Foi Apenas Um Acidente", "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFyiharCpF6ldXpqw8yTP3q-3RAcF2SWDtFw&s" },
+      { "id": "mro-03", "name": "Marty Supreme", "photo": "https://cinepop.com.br/wp-content/uploads/2026/01/marty-supreme-696x392.jpg" },
+      { "id": "mro-04", "name": "Pecadores", "photo": "https://rollingstone.com.br/wp-content/uploads/2026/01/Pecadores-se-torna-o-filme-com-mais-indicacoes-na-historia-do-Oscar-800x450.jpg" },
+      { "id": "mro-05", "name": "Valor Sentimental", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/11/valor-sentimental-divulgacao-rolling-stone.jpg" }
     ]
   },
   {
     "id": "cat-melhor-roteiro-adaptado",
     "category": "Melhor Roteiro Adaptado",
     "nominees": [
-      { "id": "mra-01", "name": "Bugonia", "photo": "" },
-      { "id": "mra-02", "name": "Frankenstein", "photo": "" },
-      { "id": "mra-03", "name": "Hamnet", "photo": "" },
-      { "id": "mra-04", "name": "Sonhos de Trem", "photo": "" },
-      { "id": "mra-05", "name": "Uma Batalha Após a Outra", "photo": "" }
+      { "id": "mra-01", "name": "Bugonia", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/08/quando-estreia-bugonia-com-emma-stone-nos-cinemas-brasileiros.jpg" },
+      { "id": "mra-02", "name": "Frankenstein", "photo": "https://s2-techtudo.glbimg.com/7tcVf00vh6b7GGgMWD7KCoRvqm0=/0x0:1200x675/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2025/n/Z/P4s1b8ROOgvUYV0vB1Og/aaaaqs3in3vvnvpzjpm9z7t1ailuaokpctrwvnkyghchbw3pbp2t022yx2bfexotdtconcpf3ylf2f2ivbbgykhwdvpw6jvabfvruixo-gkjij-5wytwe23zdfbosi-wpfi5fhvihre-ytxo9jg4q6xiiwd7.jpg" },
+      { "id": "mra-03", "name": "Hamnet", "photo": "https://m.media-amazon.com/images/S/pv-target-images/a52de74ea55637699ee0b4a9b1b1f8987b93d7885d511873c8d3254d2d236d8d.jpg" },
+      { "id": "mra-04", "name": "Sonhos de Trem", "photo": "https://i.ytimg.com/vi/WNKDeFuJUrs/maxresdefault.jpg" },
+      { "id": "mra-05", "name": "Uma Batalha Após a Outra", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/11/Uma-Batalha-Apos-a-Outra-com-Leonardo-DiCaprio-chega-ao-streaming.jpg" }
     ]
   },
   {
     "id": "cat-melhor-filme-internacional",
     "category": "Melhor Filme Internacional",
     "nominees": [
-      { "id": "mfi-01", "name": "A Voz de Hind Rajab (Tunísia)", "photo": "" },
-      { "id": "mfi-02", "name": "Foi Apenas Um Acidente (França)", "photo": "" },
-      { "id": "mfi-03", "name": "O Agente Secreto (Brasil)", "photo": "" },
-      { "id": "mfi-04", "name": "Sirât (Espanha)", "photo": "" },
-      { "id": "mfi-05", "name": "Valor Sentimental (Noruega)", "photo": "" }
+      { "id": "mfi-01", "name": "A Voz de Hind Rajab (Tunísia)", "photo": "https://s3.amazonaws.com/festivaldorio/2025/site/peliculas/large2/thevoic_p01cor_2025116039.jpg" },
+      { "id": "mfi-02", "name": "Foi Apenas Um Acidente (França)", "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFyiharCpF6ldXpqw8yTP3q-3RAcF2SWDtFw&s" },
+      { "id": "mfi-03", "name": "O Agente Secreto (Brasil)", "photo": "https://conteudo.imguol.com.br/c/entretenimento/50/2025/04/10/o-agente-secreto-filme-de-kleber-mendonca-filho-estrelado-por-wagner-moura-1744281707161_v2_1x1.jpg" },
+      { "id": "mfi-04", "name": "Sirât (Espanha)", "photo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGDuPVovHwYeRMzFGHrrdiN6KWhhDDg2FYdOywlRR-Vt_D2YQv5qFcpOPF6YctoCJTAhL779utdT3CatOipSSJv7WZuguydZDZXzlscmN0cGjGfnwTsiv9jJ16eM_dWfrdPsz0ZMZGw5_BhZlscy_hB4Fqr33bzhr8JbB3HYyScJ1XYUVI7x6QW7uLAIo/s1280/Sirat.jpg" },
+      { "id": "mfi-05", "name": "Valor Sentimental (Noruega)", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/11/valor-sentimental-divulgacao-rolling-stone.jpg" }
     ]
   },
   {
     "id": "cat-melhor-animacao",
     "category": "Melhor Animação",
     "nominees": [
-      { "id": "man-01", "name": "A Pequena Amélie", "photo": "" },
-      { "id": "man-02", "name": "Arco", "photo": "" },
-      { "id": "man-03", "name": "Elio", "photo": "" },
-      { "id": "man-04", "name": "Guerreiras do K-Pop", "photo": "" },
-      { "id": "man-05", "name": "Zootopia 2", "photo": "" }
+      { "id": "man-01", "name": "A Pequena Amélie", "photo": "https://neofeed.com.br/wp-content/uploads/2026/01/a-pequena-amelie-animacao-cinema-6-themoviedb.org_.jpg" },
+      { "id": "man-02", "name": "Arco", "photo": "https://i.ytimg.com/vi/UNUkW6ywV-c/maxresdefault.jpg" },
+      { "id": "man-03", "name": "Elio", "photo": "https://ingresso-a.akamaihd.net/b2b/production/uploads/article/image/3617/cd719c1f772c471b6a276aa5050d7e00.jpg" },
+      { "id": "man-04", "name": "Guerreiras do K-Pop", "photo": "https://billboard-com-br.s3.amazonaws.com/wp-content/uploads/2025/08/11164533/kpop-guerreiras-hot100-huntr-x-1024x538.jpg" },
+      { "id": "man-05", "name": "Zootopia 2", "photo": "https://ingresso-a.akamaihd.net/b2b/production/uploads/article/image/3464/c4bff45cee411e2f395c0d8e3ce93bcc.jpg" }
     ]
   },
   {
     "id": "cat-melhor-elenco",
     "category": "Melhor Elenco",
     "nominees": [
-      { "id": "mel-01", "name": "Hamnet", "photo": "" },
-      { "id": "mel-02", "name": "Marty Supreme", "photo": "" },
-      { "id": "mel-03", "name": "O Agente Secreto", "photo": "" },
-      { "id": "mel-04", "name": "Pecadores", "photo": "" },
-      { "id": "mel-05", "name": "Uma Batalha Após a Outra", "photo": "" }
+      { "id": "mel-01", "name": "Hamnet", "photo": "https://m.media-amazon.com/images/S/pv-target-images/a52de74ea55637699ee0b4a9b1b1f8987b93d7885d511873c8d3254d2d236d8d.jpg" },
+      { "id": "mel-02", "name": "Marty Supreme", "photo": "https://cinepop.com.br/wp-content/uploads/2026/01/marty-supreme-696x392.jpg" },
+      { "id": "mel-03", "name": "O Agente Secreto", "photo": "https://conteudo.imguol.com.br/c/entretenimento/50/2025/04/10/o-agente-secreto-filme-de-kleber-mendonca-filho-estrelado-por-wagner-moura-1744281707161_v2_1x1.jpg" },
+      { "id": "mel-04", "name": "Pecadores", "photo": "https://rollingstone.com.br/wp-content/uploads/2026/01/Pecadores-se-torna-o-filme-com-mais-indicacoes-na-historia-do-Oscar-800x450.jpg" },
+      { "id": "mel-05", "name": "Uma Batalha Após a Outra", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/11/Uma-Batalha-Apos-a-Outra-com-Leonardo-DiCaprio-chega-ao-streaming.jpg" }
     ]
   },
   {
     "id": "cat-melhor-fotografia",
     "category": "Melhor Fotografia",
     "nominees": [
-      { "id": "mfo-01", "name": "Frankenstein", "photo": "" },
-      { "id": "mfo-02", "name": "Marty Supreme", "photo": "" },
-      { "id": "mfo-03", "name": "Pecadores", "photo": "" },
-      { "id": "mfo-04", "name": "Sonhos de Trem", "photo": "" },
-      { "id": "mfo-05", "name": "Uma Batalha Após a Outra", "photo": "" }
-    ]
-  },
-  {
-    "id": "cat-melhor-trilha-sonora",
-    "category": "Melhor Trilha Sonora",
-    "nominees": [
-      { "id": "mts-01", "name": "Bugonia", "photo": "" },
-      { "id": "mts-02", "name": "Frankenstein", "photo": "" },
-      { "id": "mts-03", "name": "Hamnet", "photo": "" },
-      { "id": "mts-04", "name": "Pecadores", "photo": "" },
-      { "id": "mts-05", "name": "Uma Batalha Após a Outra", "photo": "" }
+      { "id": "mfo-01", "name": "Frankenstein", "photo": "https://s2-techtudo.glbimg.com/7tcVf00vh6b7GGgMWD7KCoRvqm0=/0x0:1200x675/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2025/n/Z/P4s1b8ROOgvUYV0vB1Og/aaaaqs3in3vvnvpzjpm9z7t1ailuaokpctrwvnkyghchbw3pbp2t022yx2bfexotdtconcpf3ylf2f2ivbbgykhwdvpw6jvabfvruixo-gkjij-5wytwe23zdfbosi-wpfi5fhvihre-ytxo9jg4q6xiiwd7.jpg" },
+      { "id": "mfo-02", "name": "Marty Supreme", "photo": "https://cinepop.com.br/wp-content/uploads/2026/01/marty-supreme-696x392.jpg" },
+      { "id": "mfo-03", "name": "Pecadores", "photo": "https://rollingstone.com.br/wp-content/uploads/2026/01/Pecadores-se-torna-o-filme-com-mais-indicacoes-na-historia-do-Oscar-800x450.jpg" },
+      { "id": "mfo-04", "name": "Sonhos de Trem", "photo": "https://i.ytimg.com/vi/WNKDeFuJUrs/maxresdefault.jpg" },
+      { "id": "mfo-05", "name": "Uma Batalha Após a Outra", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/11/Uma-Batalha-Apos-a-Outra-com-Leonardo-DiCaprio-chega-ao-streaming.jpg" }
     ]
   },
   {
     "id": "cat-melhor-cancao-original",
     "category": "Melhor Canção Original",
     "nominees": [
-      { "id": "mco-01", "name": "Dear Me (Diane Warren: Relentless)", "photo": "" },
-      { "id": "mco-02", "name": "Golden (Guerreiras do K-Pop)", "photo": "" },
-      { "id": "mco-03", "name": "I Lied to You (Pecadores)", "photo": "" },
-      { "id": "mco-04", "name": "Sweet Dreams of Joy (Viva Verdi!)", "photo": "" },
-      { "id": "mco-05", "name": "Train Dreams (Sonhos de Trem)", "photo": "" }
-    ]
-  },
-  {
-    "id": "cat-melhor-figurino",
-    "category": "Melhor Figurino",
-    "nominees": [
-      { "id": "mfg-01", "name": "Avatar: Fogo e Cinzas", "photo": "" },
-      { "id": "mfg-02", "name": "Frankenstein", "photo": "" },
-      { "id": "mfg-03", "name": "Hamnet", "photo": "" },
-      { "id": "mfg-04", "name": "Marty Supreme", "photo": "" },
-      { "id": "mfg-05", "name": "Pecadores", "photo": "" }
+      { "id": "mco-01", "name": "Dear Me (Diane Warren: Relentless)", "photo": "https://www.termometrooscar.com/uploads/1/4/8/8/1488234/s118581882355374300_p2964_i5_w800.jpeg" },
+      { "id": "mco-02", "name": "Golden (Guerreiras do K-Pop)", "photo": "https://cdn.ome.lt/o5hu0JtXI9jMG5vEZk0Ovnl13yY=/fit-in/837x500/smart/filters:format(webp)/uploads/conteudo/fotos/golden_isrwD9k.png" },
+      { "id": "mco-03", "name": "I Lied to You (Pecadores)", "photo": "https://cineset.com.br/wp-content/uploads/2026/01/Pecadores-I-Lied-to-You-1.jpg" },
+      { "id": "mco-04", "name": "Sweet Dreams of Joy (Viva Verdi!)", "photo": "https://s2-oglobo.glbimg.com/4R4vhS9k2tlBAF91u5lKkLacdB4=/0x0:636x432/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2026/S/U/RO74j4TeuElEJkbURHuQ/viva-verdi.png" },
+      { "id": "mco-05", "name": "Train Dreams (Sonhos de Trem)", "photo": "https://s3.amazonaws.com/festivaldorio/2025/site/peliculas/large2/traindr_f03cor_2025116069.jpg" }
     ]
   },
   {
     "id": "cat-melhores-efeitos-visuais",
     "category": "Melhores Efeitos Visuais",
     "nominees": [
-      { "id": "mev-01", "name": "Avatar: Fogo e Cinzas", "photo": "" },
-      { "id": "mev-02", "name": "F1", "photo": "" },
-      { "id": "mev-03", "name": "Jurassic World: Recomeço", "photo": "" },
-      { "id": "mev-04", "name": "O Ônibus Perdido", "photo": "" },
-      { "id": "mev-05", "name": "Pecadores", "photo": "" }
-    ]
-  },
-  {
-    "id": "cat-melhor-som",
-    "category": "Melhor Som",
-    "nominees": [
-      { "id": "mso-01", "name": "F1", "photo": "" },
-      { "id": "mso-02", "name": "Frankenstein", "photo": "" },
-      { "id": "mso-03", "name": "Pecadores", "photo": "" },
-      { "id": "mso-04", "name": "Sirât", "photo": "" },
-      { "id": "mso-05", "name": "Uma Batalha Após a Outra", "photo": "" }
+      { "id": "mev-01", "name": "Avatar: Fogo e Cinzas", "photo": "https://cinepop.com.br/wp-content/uploads/2025/12/avatar-fogo-e-cinzas-696x391.webp" },
+      { "id": "mev-02", "name": "F1", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/08/onde-assistir-a-f1-o-filme-maior-filme-da-carreira-de-brad-pitt-nas-plataformas-digitais.jpg" },
+      { "id": "mev-03", "name": "Jurassic World: Recomeço", "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_2U9IhMY0jtLkrVC7uxCtLT_2BIt0FmVueg&s" },
+      { "id": "mev-04", "name": "O Ônibus Perdido", "photo": "https://www.apple.com/br/tv-pr/shows-and-films/t/the-lost-bus/images/show-home-graphic-header/key-art-02/4x1/Apple_TV_The_Lost_Bus_key_art_graphic_header_4_1_show_home.jpg.og.jpg?1759332504922" },
+      { "id": "mev-05", "name": "Pecadores", "photo": "https://rollingstone.com.br/wp-content/uploads/2026/01/Pecadores-se-torna-o-filme-com-mais-indicacoes-na-historia-do-Oscar-800x450.jpg" }
     ]
   }
 ]

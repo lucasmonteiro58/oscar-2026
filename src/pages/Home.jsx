@@ -100,19 +100,19 @@ export default function Home() {
       </h1>
       <p className="text-gray-400 mb-6">Oscar 2026</p>
 
-      <ul className="space-y-3 mb-8">
+      <ul className="space-y-2 mb-8">
         {answersList.map(({ category, name, photo }) => (
           <li
             key={category}
-            className="flex justify-between items-center gap-3 py-3 px-4 rounded-xl bg-oscar-card border border-gray-800"
+            className="flex justify-between items-center gap-2 py-2 px-3 rounded-lg bg-oscar-card border border-gray-800"
           >
-            <span className="text-gray-400 text-sm flex-shrink-0">{category}</span>
-            <span className="font-medium text-right truncate min-w-0 flex-1">{name}</span>
+            <span className="text-gray-400 text-xs flex-shrink-0">{category}</span>
+            <span className="font-medium text-sm text-right truncate min-w-0 flex-1">{name}</span>
             {photo ? (
               <img
                 src={photo}
                 alt=""
-                className="w-12 h-12 rounded-lg object-cover flex-shrink-0"
+                className="w-9 h-9 rounded-md object-cover flex-shrink-0"
               />
             ) : null}
           </li>
