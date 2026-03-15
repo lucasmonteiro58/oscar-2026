@@ -245,7 +245,7 @@ export default function Admin() {
           disabled={!allFilled || publishing}
           className="flex-1 py-4 rounded-xl bg-oscar-gold text-oscar-dark font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-amber-400 transition-colors"
         >
-          {publishing ? 'Publicando...' : 'Publicar resultado'}
+          {publishing ? 'Publicando...' : `Publicar resultado (${filled}/${total})`}
         </button>
       </div>
 
