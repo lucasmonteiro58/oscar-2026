@@ -29,7 +29,10 @@ export default function Admin() {
   const [error, setError] = useState('');
   const [categories, setCategories] = useState([]);
   const [winners, setWinners] = useState({});
+  const [published, setPublished] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [publishing, setPublishing] = useState(false);
+  const [showPublishModal, setShowPublishModal] = useState(false);
   const [loading, setLoading] = useState(true);
   const [betsClosed, setBetsClosedState] = useState(false);
   const [togglingBets, setTogglingBets] = useState(false);
@@ -45,6 +48,7 @@ export default function Admin() {
       if (!cancelled) {
         setCategories(cats);
         setWinners(resultsData?.winners ?? {});
+        setPublished(resultsData?.published === true);
         setBetsClosedState(resultsData?.betsClosed === true);
       }
       setLoading(false);
@@ -96,12 +100,36 @@ export default function Admin() {
     setSaving(true);
     setError('');
     try {
-      await setResults(winners, true);
+      await setResults(winners, published);
       setError('');
     } catch (e) {
       setError(e.message ?? 'Erro ao salvar');
     }
     setSaving(false);
+  };
+
+  const handlePublishClick = () => {
+    const total = categories.length;
+    const filled = Object.keys(winners).length;
+    if (filled < total) {
+      setError(`Preencha todas as categorias antes de publicar (${filled}/${total})`);
+      return;
+    }
+    setError('');
+    setShowPublishModal(true);
+  };
+
+  const handlePublishConfirm = async () => {
+    setPublishing(true);
+    setError('');
+    try {
+      await setResults(winners, true);
+      setPublished(true);
+      setShowPublishModal(false);
+    } catch (e) {
+      setError(e.message ?? 'Erro ao publicar');
+    }
+    setPublishing(false);
   };
 
   if (!authenticated) {
@@ -207,16 +235,64 @@ export default function Admin() {
         ))}
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-oscar-dark border-t border-gray-800 max-w-2xl mx-auto">
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-oscar-dark border-t border-gray-800 max-w-2xl mx-auto flex gap-3">
         <button
           type="button"
           onClick={handleSave}
           disabled={!allFilled || saving}
-          className="w-full py-4 rounded-xl bg-oscar-gold text-oscar-dark font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-amber-400 transition-colors"
+          className="flex-1 py-4 rounded-xl border border-gray-600 text-gray-200 font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-800 transition-colors"
         >
-          {saving ? 'Salvando...' : allFilled ? 'Salvar e publicar resultado' : `Preencha todas (${filled}/${total})`}
+          {saving ? 'Salvando...' : 'Salvar'}
+        </button>
+        <button
+          type="button"
+          onClick={handlePublishClick}
+          disabled={!allFilled || publishing}
+          className="flex-1 py-4 rounded-xl bg-oscar-gold text-oscar-dark font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-amber-400 transition-colors"
+        >
+          {publishing ? 'Publicando...' : 'Publicar resultado'}
         </button>
       </div>
+
+      {showPublishModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70"
+          onClick={() => !publishing && setShowPublishModal(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="publish-modal-title"
+        >
+          <div
+            className="w-full max-w-sm rounded-2xl bg-oscar-card border border-gray-700 shadow-xl p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 id="publish-modal-title" className="font-display text-xl font-bold text-oscar-gold mb-2">
+              Publicar resultado?
+            </h2>
+            <p className="text-gray-400 text-sm mb-6">
+              Os participantes poderão ver o resultado do bolão e o ranking. Esta ação torna o resultado visível para todos.
+            </p>
+            <div className="flex gap-3">
+              <button
+                type="button"
+                onClick={() => !publishing && setShowPublishModal(false)}
+                disabled={publishing}
+                className="flex-1 py-3 rounded-xl border border-gray-600 text-gray-300 font-medium hover:bg-gray-800 transition-colors disabled:opacity-50"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                onClick={handlePublishConfirm}
+                disabled={publishing}
+                className="flex-1 py-3 rounded-xl bg-oscar-gold text-oscar-dark font-semibold hover:bg-amber-400 transition-colors disabled:opacity-50"
+              >
+                {publishing ? 'Publicando...' : 'Publicar'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
