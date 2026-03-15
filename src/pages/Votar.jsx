@@ -14,6 +14,7 @@ export default function Votar() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const [submitting, setSubmitting] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -37,6 +38,18 @@ export default function Votar() {
       navigate('/', { replace: true });
     }
   }, [user, navigate]);
+
+  useEffect(() => {
+    if (categories.length > 0) {
+      window.scrollTo(0, 0);
+    }
+  }, [currentIndex]);
+
+  useEffect(() => {
+    if (showConfirmation) {
+      window.scrollTo(0, 0);
+    }
+  }, [showConfirmation]);
 
   if (loading || !user) {
     return (
@@ -90,6 +103,11 @@ export default function Votar() {
     setCurrentIndex((i) => i - 1);
   };
 
+  const handleOpenConfirmation = () => {
+    if (Object.keys(answers).length !== total) return;
+    setShowConfirmation(true);
+  };
+
   const handleSubmit = async () => {
     if (Object.keys(answers).length !== total) return;
     setSubmitting(true);
@@ -100,6 +118,67 @@ export default function Votar() {
       setSubmitting(false);
     }
   };
+
+  const categoryMap = Object.fromEntries(categories.map((c) => [c.id, c]));
+  const answersList = Object.entries(answers).map(([catId, nomineeId]) => {
+    const cat = categoryMap[catId];
+    const nominee = cat?.nominees?.find((n) => n.id === nomineeId);
+    const photo = nominee?.photo && typeof nominee.photo === 'string' ? nominee.photo.trim() : '';
+    return {
+      category: cat?.category ?? catId,
+      name: nominee?.name ?? nomineeId,
+      photo: photo || null,
+    };
+  });
+
+  if (showConfirmation) {
+    return (
+      <div className="min-h-screen flex flex-col px-4 py-8 pb-32 max-w-lg mx-auto">
+        <h1 className="font-display text-2xl font-bold text-oscar-gold mb-2">
+          Confirme sua votação
+        </h1>
+        <p className="text-gray-400 text-sm mb-6">
+          Revise suas escolhas abaixo. Após confirmar, não será possível alterar.
+        </p>
+        <ul className="space-y-2 flex-1 overflow-auto">
+          {answersList.map(({ category, name, photo }) => (
+            <li
+              key={category}
+              className="flex justify-between items-center gap-2 py-2 px-3 rounded-lg bg-oscar-card border border-gray-800"
+            >
+              <span className="text-gray-400 text-xs flex-shrink-0">{category}</span>
+              <span className="font-medium text-sm text-right truncate min-w-0 flex-1">{name}</span>
+              {photo ? (
+                <img
+                  src={photo}
+                  alt=""
+                  className="w-9 h-9 rounded-md object-cover flex-shrink-0"
+                />
+              ) : null}
+            </li>
+          ))}
+        </ul>
+        <div className="fixed bottom-0 left-0 right-0 bg-oscar-dark border-t border-gray-800 p-4 flex gap-3 max-w-lg mx-auto">
+          <button
+            type="button"
+            onClick={() => setShowConfirmation(false)}
+            className="px-6 py-3 rounded-xl border border-gray-600 text-gray-300 hover:bg-gray-800 transition-colors"
+          >
+            Voltar
+          </button>
+          <div className="flex-1" />
+          <button
+            type="button"
+            onClick={handleSubmit}
+            disabled={submitting}
+            className="px-6 py-3 rounded-xl bg-oscar-gold text-oscar-dark font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-amber-400 transition-colors"
+          >
+            {submitting ? 'Enviando...' : 'Confirmar e enviar'}
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (total === 0) {
     return (
@@ -167,11 +246,11 @@ export default function Votar() {
         ) : (
           <button
             type="button"
-            onClick={handleSubmit}
-            disabled={!canProceed || submitting}
+            onClick={handleOpenConfirmation}
+            disabled={!canProceed}
             className="px-6 py-3 rounded-xl bg-oscar-gold text-oscar-dark font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-amber-400 transition-colors"
           >
-            {submitting ? 'Enviando...' : 'Confirmar envio'}
+            Revisar votação
           </button>
         )}
       </footer>

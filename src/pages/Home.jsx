@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { getVote, getResults } from '../services/firestore';
+import { getVote, getResults, getAllVotes, getAllUsers } from '../services/firestore';
 import { loadCategories } from '../data/categories';
 
 function UserHeader({ user, onLogout }) {
@@ -36,21 +36,32 @@ export default function Home() {
   const [vote, setVote] = useState(null);
   const [results, setResults] = useState(null);
   const [categories, setCategories] = useState([]);
+  const [participants, setParticipants] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!user) return;
     let cancelled = false;
     async function load() {
-      const [voteData, resultsData, cats] = await Promise.all([
+      const [voteData, resultsData, cats, votesList, usersMap] = await Promise.all([
         getVote(user.uid),
         getResults(),
         loadCategories(),
+        getAllVotes(),
+        getAllUsers(),
       ]);
       if (!cancelled) {
         setVote(voteData);
         setResults(resultsData);
         setCategories(cats);
+        const whoVoted = votesList
+          .filter((v) => v.answers && Object.keys(v.answers).length > 0)
+          .map((v) => ({
+            uid: v.uid,
+            displayName: usersMap[v.uid]?.displayName ?? 'Anônimo',
+            photoURL: usersMap[v.uid]?.photoURL ?? '',
+          }));
+        setParticipants(whoVoted);
       }
       setLoading(false);
     }
@@ -100,39 +111,75 @@ export default function Home() {
       </h1>
       <p className="text-gray-400 mb-6">Oscar 2026</p>
 
-      <ul className="space-y-2 mb-8">
-        {answersList.map(({ category, name, photo }) => (
-          <li
-            key={category}
-            className="flex justify-between items-center gap-2 py-2 px-3 rounded-lg bg-oscar-card border border-gray-800"
-          >
-            <span className="text-gray-400 text-xs flex-shrink-0">{category}</span>
-            <span className="font-medium text-sm text-right truncate min-w-0 flex-1">{name}</span>
-            {photo ? (
-              <img
-                src={photo}
-                alt=""
-                className="w-9 h-9 rounded-md object-cover flex-shrink-0"
-              />
-            ) : null}
-          </li>
-        ))}
-      </ul>
-
+      {/* Primeiro: aguardando resultado ou botão ver resultados */}
       {published ? (
         <button
           type="button"
           onClick={() => navigate('/resultado')}
-          className="w-full py-4 rounded-xl bg-oscar-gold text-oscar-dark font-semibold hover:bg-amber-400 transition-colors"
+          className="w-full py-4 rounded-xl bg-oscar-gold text-oscar-dark font-semibold hover:bg-amber-400 transition-colors mb-8"
         >
-          Conferir resultado
+          Ver resultados
         </button>
       ) : (
-        <div className="text-center py-6 px-4 rounded-xl bg-oscar-card border border-gray-800">
+        <div className="text-center py-6 px-4 rounded-xl bg-oscar-card border border-gray-800 mb-8">
           <p className="text-gray-400">Aguardando o resultado da cerimônia</p>
           <p className="text-sm text-gray-500 mt-1">Quando estiver disponível, o botão aparecerá aqui</p>
         </div>
       )}
+
+      {/* Depois: lista de votos */}
+      <section aria-label="Lista de votos">
+        <ul className="space-y-2">
+          {answersList.map(({ category, name, photo }) => (
+            <li
+              key={category}
+              className="flex justify-between items-center gap-2 py-2 px-3 rounded-lg bg-oscar-card border border-gray-800"
+            >
+              <span className="text-gray-400 text-xs flex-shrink-0">{category}</span>
+              <span className="font-medium text-sm text-right truncate min-w-0 flex-1">{name}</span>
+              {photo ? (
+                <img
+                  src={photo}
+                  alt=""
+                  className="w-9 h-9 rounded-md object-cover flex-shrink-0"
+                />
+              ) : null}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Participantes do bolão */}
+      <section className="mt-10 pt-8 border-t border-gray-800" aria-label="Participantes do bolão">
+        <h2 className="font-display text-lg font-semibold text-oscar-gold mb-4">
+          Participantes do bolão
+        </h2>
+        <ul className="space-y-2">
+          {participants.map((p) => (
+            <li
+              key={p.uid}
+              className="flex items-center gap-3 py-2 px-3 rounded-lg bg-oscar-card border border-gray-800"
+            >
+              <div className="w-10 h-10 rounded-full bg-gray-700 overflow-hidden flex-shrink-0">
+                {p.photoURL ? (
+                  <img
+                    src={p.photoURL}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <span className="w-full h-full flex items-center justify-center text-oscar-gold font-semibold">
+                    {p.displayName?.charAt(0)?.toUpperCase() ?? '?'}
+                  </span>
+                )}
+              </div>
+              <span className="font-medium text-gray-200 truncate">
+                {p.uid === user.uid ? `${p.displayName} (você)` : p.displayName}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 }
