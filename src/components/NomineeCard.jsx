@@ -1,5 +1,6 @@
 export default function NomineeCard({ nominee, selected, onSelect }) {
-  const hasPhoto = nominee.photo && nominee.photo.trim() !== '';
+  const photo = nominee?.photo && typeof nominee.photo === 'string' ? nominee.photo.trim() : '';
+  const hasPhoto = photo !== '';
   const initials = nominee.name
     .split(' ')
     .slice(0, 2)
@@ -20,7 +21,7 @@ export default function NomineeCard({ nominee, selected, onSelect }) {
       <div className="aspect-[4/3] bg-gray-800 flex items-center justify-center overflow-hidden">
         {hasPhoto ? (
           <img
-            src={nominee.photo}
+            src={photo}
             alt=""
             className="w-full h-full object-cover"
           />

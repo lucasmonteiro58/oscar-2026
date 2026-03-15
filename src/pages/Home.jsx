@@ -78,7 +78,12 @@ export default function Home() {
   const answersList = Object.entries(vote.answers).map(([catId, nomineeId]) => {
     const cat = categoryMap[catId];
     const nominee = cat?.nominees?.find((n) => n.id === nomineeId);
-    return { category: cat?.category ?? catId, name: nominee?.name ?? nomineeId };
+    const photo = nominee?.photo && typeof nominee.photo === 'string' ? nominee.photo.trim() : '';
+    return {
+      category: cat?.category ?? catId,
+      name: nominee?.name ?? nomineeId,
+      photo: photo || null,
+    };
   });
   const published = results?.published === true;
 
@@ -96,13 +101,20 @@ export default function Home() {
       <p className="text-gray-400 mb-6">Oscar 2026</p>
 
       <ul className="space-y-3 mb-8">
-        {answersList.map(({ category, name }) => (
+        {answersList.map(({ category, name, photo }) => (
           <li
             key={category}
-            className="flex justify-between items-center py-3 px-4 rounded-xl bg-oscar-card border border-gray-800"
+            className="flex justify-between items-center gap-3 py-3 px-4 rounded-xl bg-oscar-card border border-gray-800"
           >
-            <span className="text-gray-400 text-sm">{category}</span>
-            <span className="font-medium text-right max-w-[60%]">{name}</span>
+            <span className="text-gray-400 text-sm flex-shrink-0">{category}</span>
+            <span className="font-medium text-right truncate min-w-0 flex-1">{name}</span>
+            {photo ? (
+              <img
+                src={photo}
+                alt=""
+                className="w-12 h-12 rounded-lg object-cover flex-shrink-0"
+              />
+            ) : null}
           </li>
         ))}
       </ul>

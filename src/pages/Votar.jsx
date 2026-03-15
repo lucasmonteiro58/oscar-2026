@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { loadCategories } from '../data/categories';
-import { submitVote } from '../services/firestore';
+import { submitVote, getResults } from '../services/firestore';
 import NomineeCard from '../components/NomineeCard';
 
 export default function Votar() {
@@ -10,15 +10,26 @@ export default function Votar() {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [betsClosed, setBetsClosed] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    loadCategories().then((data) => {
-      setCategories(data);
+    let cancelled = false;
+    async function load() {
+      const [data, results] = await Promise.all([
+        loadCategories(),
+        getResults(),
+      ]);
+      if (!cancelled) {
+        setCategories(data);
+        setBetsClosed(results?.betsClosed === true);
+      }
       setLoading(false);
-    });
+    }
+    load();
+    return () => { cancelled = true; };
   }, []);
 
   useEffect(() => {
@@ -32,6 +43,28 @@ export default function Votar() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-pulse text-oscar-gold font-display text-xl">
           Carregando...
+        </div>
+      </div>
+    );
+  }
+
+  if (betsClosed) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center px-6">
+        <div className="text-center max-w-sm">
+          <h1 className="font-display text-2xl font-bold text-oscar-gold mb-3">
+            Apostas encerradas
+          </h1>
+          <p className="text-gray-400 mb-6">
+            O período de apostas foi encerrado. Não é mais possível enviar ou alterar votos.
+          </p>
+          <button
+            type="button"
+            onClick={() => navigate('/', { replace: true })}
+            className="w-full py-4 rounded-xl bg-oscar-gold text-oscar-dark font-semibold hover:bg-amber-400 transition-colors"
+          >
+            Voltar ao início
+          </button>
         </div>
       </div>
     );

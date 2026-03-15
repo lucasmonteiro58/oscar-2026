@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loadCategories } from '../data/categories';
-import { getResults, setResults } from '../services/firestore';
+import { getResults, setResults, setBetsClosed } from '../services/firestore';
 import NomineeCard from '../components/NomineeCard';
 
 const ADMIN_PASSWORD = '91501748';
@@ -31,6 +31,8 @@ export default function Admin() {
   const [winners, setWinners] = useState({});
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [betsClosed, setBetsClosedState] = useState(false);
+  const [togglingBets, setTogglingBets] = useState(false);
 
   useEffect(() => {
     if (!authenticated) return;
@@ -43,12 +45,25 @@ export default function Admin() {
       if (!cancelled) {
         setCategories(cats);
         setWinners(resultsData?.winners ?? {});
+        setBetsClosedState(resultsData?.betsClosed === true);
       }
       setLoading(false);
     }
     load();
     return () => { cancelled = true; };
   }, [authenticated]);
+
+  const handleToggleBets = async () => {
+    setTogglingBets(true);
+    setError('');
+    try {
+      await setBetsClosed(!betsClosed);
+      setBetsClosedState(!betsClosed);
+    } catch (e) {
+      setError(e.message ?? 'Erro ao alterar status das apostas');
+    }
+    setTogglingBets(false);
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -148,9 +163,23 @@ export default function Admin() {
         </button>
       </div>
 
-      <p className="text-gray-400 mb-6">
+      <p className="text-gray-400 mb-4">
         {filled} / {total} categorias preenchidas
       </p>
+
+      <div className="mb-6 flex flex-col gap-2">
+        <p className="text-sm text-gray-500">
+          {betsClosed ? 'Apostas encerradas — ninguém pode mais votar.' : 'Apostas abertas — participantes podem votar.'}
+        </p>
+        <button
+          type="button"
+          onClick={handleToggleBets}
+          disabled={togglingBets}
+          className="w-full py-3 rounded-xl border border-gray-600 text-gray-300 hover:bg-gray-800 transition-colors disabled:opacity-50"
+        >
+          {togglingBets ? 'Salvando...' : betsClosed ? 'Reabrir apostas' : 'Encerrar apostas'}
+        </button>
+      </div>
 
       {error && (
         <div className="mb-4 p-3 rounded-lg bg-red-500/20 text-red-400 text-sm">

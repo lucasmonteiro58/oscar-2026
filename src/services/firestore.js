@@ -53,6 +53,11 @@ export async function setResults(winners, published = false) {
   await setDoc(ref, { winners, published }, { merge: true });
 }
 
+export async function setBetsClosed(closed) {
+  const ref = doc(db, RESULTS_COLLECTION, RESULTS_DOC);
+  await setDoc(ref, { betsClosed: !!closed }, { merge: true });
+}
+
 export async function getAllUsers() {
   const snap = await getDocs(collection(db, USERS));
   const map = {};

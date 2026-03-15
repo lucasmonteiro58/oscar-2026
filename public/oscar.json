@@ -4,37 +4,37 @@
     "category": "Melhor Filme",
     "nominees": [
       { "id": "mf-01", "name": "Bugonia", "photo": "https://t.ctcdn.com.br/YaA9HkWZgO3YFZrzyZJGTyaSlXE=/640x360/smart/i1057093.png" },
-      { "id": "mf-02", "name": "F1", "photo": "" },
-      { "id": "mf-03", "name": "Frankenstein", "photo": "" },
-      { "id": "mf-04", "name": "Hamnet", "photo": "" },
-      { "id": "mf-05", "name": "Marty Supreme", "photo": "" },
-      { "id": "mf-06", "name": "O Agente Secreto", "photo": "" },
-      { "id": "mf-07", "name": "Pecadores", "photo": "" },
-      { "id": "mf-08", "name": "Sonhos de Trem", "photo": "" },
-      { "id": "mf-09", "name": "Uma Batalha Após a Outra", "photo": "" },
-      { "id": "mf-10", "name": "Valor Sentimental", "photo": "" }
+      { "id": "mf-02", "name": "F1", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/08/onde-assistir-a-f1-o-filme-maior-filme-da-carreira-de-brad-pitt-nas-plataformas-digitais.jpg" },
+      { "id": "mf-03", "name": "Frankenstein", "photo": "https://s2-techtudo.glbimg.com/7tcVf00vh6b7GGgMWD7KCoRvqm0=/0x0:1200x675/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2025/n/Z/P4s1b8ROOgvUYV0vB1Og/aaaaqs3in3vvnvpzjpm9z7t1ailuaokpctrwvnkyghchbw3pbp2t022yx2bfexotdtconcpf3ylf2f2ivbbgykhwdvpw6jvabfvruixo-gkjij-5wytwe23zdfbosi-wpfi5fhvihre-ytxo9jg4q6xiiwd7.jpg" },
+      { "id": "mf-04", "name": "Hamnet", "photo": "https://m.media-amazon.com/images/S/pv-target-images/a52de74ea55637699ee0b4a9b1b1f8987b93d7885d511873c8d3254d2d236d8d.jpg" },
+      { "id": "mf-05", "name": "Marty Supreme", "photo": "https://cinepop.com.br/wp-content/uploads/2026/01/marty-supreme-696x392.jpg" },
+      { "id": "mf-06", "name": "O Agente Secreto", "photo": "https://conteudo.imguol.com.br/c/entretenimento/50/2025/04/10/o-agente-secreto-filme-de-kleber-mendonca-filho-estrelado-por-wagner-moura-1744281707161_v2_1x1.jpg" },
+      { "id": "mf-07", "name": "Pecadores", "photo": "https://rollingstone.com.br/wp-content/uploads/2026/01/Pecadores-se-torna-o-filme-com-mais-indicacoes-na-historia-do-Oscar-800x450.jpg" },
+      { "id": "mf-08", "name": "Sonhos de Trem", "photo": "https://i.ytimg.com/vi/WNKDeFuJUrs/maxresdefault.jpg" },
+      { "id": "mf-09", "name": "Uma Batalha Após a Outra", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/11/Uma-Batalha-Apos-a-Outra-com-Leonardo-DiCaprio-chega-ao-streaming.jpg" },
+      { "id": "mf-10", "name": "Valor Sentimental", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/11/valor-sentimental-divulgacao-rolling-stone.jpg" }
     ]
   },
   {
     "id": "cat-melhor-ator",
     "category": "Melhor Ator",
     "nominees": [
-      { "id": "ma-01", "name": "Ethan Hawke (Blue Moon)", "photo": "" },
-      { "id": "ma-02", "name": "Leonardo DiCaprio (Uma Batalha Após a Outra)", "photo": "" },
-      { "id": "ma-03", "name": "Michael B. Jordan (Pecadores)", "photo": "" },
-      { "id": "ma-04", "name": "Timothée Chalamet (Marty Supreme)", "photo": "" },
-      { "id": "ma-05", "name": "Wagner Moura (O Agente Secreto)", "photo": "" }
+      { "id": "ma-01", "name": "Ethan Hawke (Blue Moon)", "photo": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/BLUE-MOON-ETHAN-HAWKE-e1763738273849.jpg" },
+      { "id": "ma-02", "name": "Leonardo DiCaprio (Uma Batalha Após a Outra)", "photo": "https://s2-oglobo.glbimg.com/dnLqghNjS9KpmnPEGbQHvZ4wzIY=/0x0:800x480/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2025/o/B/yLO7wwRJKTgVhvN5g6Zw/leo.jpg" },
+      { "id": "ma-03", "name": "Michael B. Jordan (Pecadores)", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/04/como-foram-filmadas-as-cenas-de-michael-b-jordan-em-pecadores.jpg" },
+      { "id": "ma-04", "name": "Timothée Chalamet (Marty Supreme)", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/11/marty-supreme-tmdb.jpg" },
+      { "id": "ma-05", "name": "Wagner Moura (O Agente Secreto)", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/08/o-agente-secreto-filme-com-wagner-moura-ganha-teaser-oficial.jpg" }
     ]
   },
   {
     "id": "cat-melhor-atriz",
     "category": "Melhor Atriz",
     "nominees": [
-      { "id": "maz-01", "name": "Emma Stone (Bugonia)", "photo": "" },
-      { "id": "maz-02", "name": "Jessie Buckley (Hamnet)", "photo": "" },
-      { "id": "maz-03", "name": "Kate Hudson (Song Sung Blue)", "photo": "" },
-      { "id": "maz-04", "name": "Renate Reinsve (Valor Sentimental)", "photo": "" },
-      { "id": "maz-05", "name": "Rose Byrne (Se Eu Tivesse Pernas, Eu Te Chutaria)", "photo": "" }
+      { "id": "maz-01", "name": "Emma Stone (Bugonia)", "photo": "https://rollingstone.com.br/wp-content/uploads/2025/08/quando-estreia-bugonia-com-emma-stone-nos-cinemas-brasileiros.jpg" },
+      { "id": "maz-02", "name": "Jessie Buckley (Hamnet)", "photo": "https://static.independent.co.uk/2026/01/05/8/11/4238_D045_00238_R.jpeg" },
+      { "id": "maz-03", "name": "Kate Hudson (Song Sung Blue)", "photo": "https://images.squarespace-cdn.com/content/v1/627183f4651ed74c7ee6158e/07664a86-c63e-41f6-99ec-c98c5661083d/kate-hudson-song-sung-blue-110525-cf2d5a0d2bbc435c87661a6c5e0a8e91.jpg" },
+      { "id": "maz-04", "name": "Renate Reinsve (Valor Sentimental)", "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnnhh2D0H6mi_DzNdc3ISMNyOAc6Jwtm-mFQ&s" },
+      { "id": "maz-05", "name": "Rose Byrne (Se Eu Tivesse Pernas, Eu Te Chutaria)", "photo": "https://static.wixstatic.com/media/894d3e_653bf057a961463e916cc8bb82f55c17~mv2.jpg/v1/fill/w_800,h_450,al_c,q_80,enc_avif,quality_auto/894d3e_653bf057a961463e916cc8bb82f55c17~mv2.jpg" }
     ]
   },
   {
